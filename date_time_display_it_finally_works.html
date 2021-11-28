@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Style section here uses CSS to center text and set the size-->
+<style>
+    
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    p {font-size: 1.875em; /* 14px/16=0.875em */}
+    </style>
+    </head>
+<body style="background-color:powderblue;">
+
+    <!--Creates first heading, names it, and aline break-->
+    <h1> Mission Control <br>
+        Date and Time  </h1>
+
+    <!--creates a paragraph, names it p1-->
+    <p id="p1"></p>
+
+    <!--creates another paragraph, names it p2-->
+    <p id="p2"></p>
+    
+
+<script>   
+
+//calls the setInterval method to run the script in 1000ms intervals
+window.setInterval(function() {
+
+//declares new variable named today
+var today = new Date();
+
+//declares new variable named DATE, defines it using GET/fullyear/month/date methods
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+//declares new variable named TIME, defines it using GET/Hours/Minutes/Seconds methods
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(); 
+
+//assigns DATE variable to p1, calls it as innerhtml, prints to html page
+document.getElementById("p1").innerHTML = date;
+
+//assigns TIME variable to p2, calls it as innerhtml, prints to html page
+document.getElementById("p2").innerHTML = time;
+
+//the 1000ms interval is specified here
+}, 1000);
+
+
+</script>
+
+</p>
+</html>
