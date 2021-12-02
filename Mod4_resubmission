@@ -27,7 +27,12 @@
                     setTimeout(loop, 1000);
 
                 }
+                if (n< 0) {
 
+//adds in innterHTML tag (is that the right term?) for the text to display when the condition is satisfied
+                    document.getElementById("DisplayCountdown").innerHTML = "BLASTOFF!!!"
+                    
+                }
             })();
 
         }
