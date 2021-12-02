@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+//declares function, names it counter, adds n as parameter
+        function counter(n) {
+
+//creates a loop function within the counter function
+            (function loop() {
+
+//writes output to the console
+                console.log(n);
+
+//creates innerHTRML, names it DisplayCountdown, makes n its value
+                document.getElementById("DisplayCountdown").innerHTML = n;
+
+//creates if loop, sets it to exit when n-- is false
+                if (n--) {
+
+//calls setTimeout, loops it and makes 1000ms the interval
+                    setTimeout(loop, 1000);
+
+                }
+
+            })();
+
+        }
+
+          </script>
+</head>
+
+<body>
+
+    <body style="background-color:powderblue;">
+
+<!--the following text on the page-->
+        <h1>Countdown to Blast Off!</h1>
+        <p>This application will start the countdown</p>
+        <h2>Countdown</h2>
+
+<!--creates a button, makes it start the counter function, inputs 10 as the parameter-->
+        <button tpe="button" onclick="counter(10)">Start Countdown</button>
+
+<!--displays 10 as the starter text on the page before the counter function initiates-->
+        <p id="DisplayCountdown">10</p>
+
+    </body>
+
+</html>
